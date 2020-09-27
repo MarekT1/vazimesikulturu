@@ -1,0 +1,487 @@
+/* importing mixing and variables */
+@import "mixins.less";
+@import "variables.less";
+
+/* rules for body contents */
+
+  body {
+    font-family: @font-family-base;
+    line-height: 24px;
+    .font-size(16);
+    background-color: @white;
+    color: @paragraph-color;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @font-family-heading;
+  }
+
+
+  h1, .h1 {
+    .font-size(43);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  h2, .h2 {
+    .font-size(40);
+    font-weight: 700;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .section-heading {
+    font-weight: 200;
+    color: @brand-color;
+  }
+
+  .section-heading-white{
+    //font-weight: 200;
+    color: @white;
+  }
+
+  h3, .h3 {
+    .font-size(40);
+    font-weight: 400;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  h4, .h4 {
+    .font-size(30);
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 0px;
+    font-weight: bold;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  h5, .h5 {
+    .font-size(24);
+    font-weight: 400;
+    font-weight: bold;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      color: @title-color;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h4.footer-title{
+    font-family:@font-family-base;
+    margin-bottom: 8px;
+    font-style: normal;
+    a{
+      color:@white; 
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  a.footer-link {
+      color:@white; 
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  h6, .h6 {
+    .font-size(18);
+    font-weight: 400;
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  p, ul, ol {
+    font-family:@font-family-base;
+    .font-size(19);
+    color: @paragraph-color;
+    // padding-top: 10px;
+  }
+
+  .petition-info p{
+    margin-bottom: 20px;
+
+  }
+
+  a, a:hover, a:focus {
+    color: @brand-light;
+  }
+
+  .letter-quote {
+    font-style: italic;
+    color: @orange;
+  }
+
+.btn:not(.btn-raised):not(.btn-link),
+.btn:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn:not(.btn-raised):not(.btn-link),
+.btn.btn-brand:not(.btn-raised):not(.btn-link),
+.btn.btn-brand:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-brand:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-brand:not(.btn-raised):not(.btn-link) {
+  background-color: transparent;
+  font-family: @font-family-heading;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: @brand-color;
+  line-height: 1.6rem;
+  padding: 10px 30px;
+  margin: 0;
+  border: 1px solid @brand-color;
+  .border-radius(25px);
+  transition: 0.3s;
+  text-transform: none;
+  &:hover, &:active, &:focus {
+    background-color: @brand-color;
+    border: 1px solid @brand-color;
+    color: @white;
+  }
+}
+
+.btn.btn-light:not(.btn-raised):not(.btn-link),
+.btn.btn-light:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-light:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-light:not(.btn-raised):not(.btn-link) {
+  color: @brand-light;
+  border: 1px solid @brand-light;
+  &:hover, &:active, &:focus {
+    background-color: @brand-light;
+    color: @white;
+    border: 1px solid @brand-light;
+  }
+}
+
+.btn.btn-dark:not(.btn-raised):not(.btn-link),
+.btn.btn-dark:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-dark:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-dark:not(.btn-raised):not(.btn-link) {
+  color: @brand-dark;
+  border: 1px solid @brand-dark;
+  &:hover, &:active, &:focus {
+    background-color: @brand-dark;
+    color: @white;
+    border: 1px solid @brand-dark;
+  }
+}
+
+
+.btn.btn-cta:not(.btn-raised):not(.btn-link),
+.btn.btn-cta:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-cta:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-cta:not(.btn-raised):not(.btn-link) {
+  color: @white;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  border: 1px solid @brand-color;
+  padding: 15px 30px !important;
+  .bg-rgba(@brand-color, 0.90);
+
+  &:hover, &:active, &:focus {
+    .bg-rgba(@white, 1);
+    color: @brand-color !important;
+
+  }
+}
+
+.btn.btn-cta-n:not(.btn-raised):not(.btn-link),
+.btn.btn-cta-n:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-cta-n:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-cta-n:not(.btn-raised):not(.btn-link) {
+  color: @brand-color;
+  border: 1px solid @brand-color;
+  padding: 15px 30px !important;
+  //.bg-rgba(, 0.90);
+  &:hover, &:active, &:focus {
+    .bg-rgba(@brand-color, 1);
+    color: @white;
+
+  }
+}
+
+
+.btn.btn-sm:not(.btn-raised):not(.btn-link),
+.btn.btn-sm:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-sm:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-sm:not(.btn-raised):not(.btn-link) {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding: 8px 24px;
+  &:hover, &:active, &:focus {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 8px 24px;
+  }
+}
+
+
+.btn.btn-lg:not(.btn-raised):not(.btn-link),
+.btn.btn-lg:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-lg:not(.btn-raised):not(.btn-link),
+.input-group-btn .btn.btn-lg:not(.btn-raised):not(.btn-link) {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  padding: 15px 40px;
+  &:hover, &:active, &:focus {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    padding: 15px 40px;
+  }
+}
+
+
+
+  .img-left {
+    padding: 1rem 1rem 1rem 0;
+    float: left;
+  }
+
+  .img-right {
+    padding: 1rem 0 1rem 1rem;
+    float: right;
+  }
+
+  .img-center {
+    display: block;
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+
+  .page-heading, .sub-heading {
+    color: @brand-color;
+  }
+
+
+  table {
+    border: 1px solid @brand-color;
+  }
+
+  .table > thead > tr > th {
+    border-bottom: 2px solid @brand-color;
+    background: @brand-color;
+    color: @white;
+  }
+
+  .table > tbody > tr > td,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > td,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > thead > tr > th {
+    border: 1px solid @brand-color;
+    .font-size(13);
+    line-height: 25px;
+    a {
+      color: @black;
+      &:hover {
+        text-decoration: underline;
+        color: @brand-color;
+      }
+    }
+  }
+
+
+  .social-area {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+
+        color: @white;
+        text-align: center;
+        /*padding: 10px 3.5px;*/
+        border-radius: 50%;
+        transition: 0.3s;
+        .opacity(1);
+        height: 30px;
+        width: 30px;
+        i {
+          .font-size(13);
+          line-height: 30px;
+        }
+        &:hover, &:active, &:focus {
+          .opacity(.8);
+          i {
+            color: @black;
+          }
+
+        }
+      }
+    }
+  }
+  .social-area-signature{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  /*Instead of writing inside the social area, writing this as global, so that it can be used at multiple places*/
+  .facebook, .google-plus, .twitter, .linkedin, .envelop {
+    color: @white;
+    border-color: transparent;
+    &:hover {
+      .opacity(.9);
+    }
+  }
+  .facebook, button.btn.btn-brand.btn-sm.facebook {
+    background-color: #3b5998;
+    &:hover {
+      background-color: #3b5998;
+      border-color: transparent;
+    }
+  }
+  .google-plus, button.btn.btn-brand.btn-sm.google-plus {
+    background-color: #dd4b39;
+    &:hover {
+      background-color: #dd4b39;
+      border-color: transparent;
+    }
+  }
+  .twitter, button.btn.btn-brand.btn-sm.twitter {
+    background-color: #1da1f2;
+    &:hover {
+      background-color: #1da1f2;
+      border-color: transparent;
+    }
+  }
+  .linkedin {
+    background-color: #0077b5;
+  }
+  .envelop {
+    background-color: #8a90c7;
+  }
+
+button.btn.btn-brand.btn-sm.facebook,
+button.btn.btn-brand.btn-sm.google-plus,
+button.btn.btn-brand.btn-sm.twitter {
+  color: @white;
+  border: 1px solid transparent;
+  .opacity(.8);
+  &:hover {
+    .opacity(1);
+  }
+}
+
+
+
+
+#pagination-wrapper {
+  ul.pagination {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    li {
+      a {
+        border-radius: 50%;
+        .font-size(12);
+        border: 1px solid @brand-color;
+        margin: 2px;
+      }
+
+      &:hover, &:focus {
+        a {
+          background-color: @brand-color;
+          color: @white;
+        }
+      }
+    }
+    li.disabled {
+      a {
+        .opacity(.5);
+      }
+    }
+    li.active {
+      a {
+        background-color: @brand-color;
+        color: @white;
+      }
+    }
+  }
+}
+
+.cbxmapcanvas{
+  min-height:400px;
+}
+
+.jqcbxgoglemap_info{
+  h3.jqcbxgoglemap_info_heading{
+    .font-size(16);
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: @brand-color;
+  }
+  .jqcbxgoglemap_info_body{
+
+  }
+}
+
+.section_view_more{
+  margin-top: 3rem;
+}
+
+.margin-top-1{
+  margin-top: 1rem;
+}
+
+.margin-top-2{
+  margin-top: 2rem;
+}
+
+.margin-top-3{
+  margin-top: 3rem;
+}
+
+.margin-top-4{
+  margin-top: 4rem;
+}
+
+.margin-bottom-1{
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2{
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-3{
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-4{
+  margin-bottom: 4rem;
+}
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  .opacity(.5);
+  z-index: 2000;
+}
+
+.heading-no-top-margin{
+  margin-top: 0px;
+}

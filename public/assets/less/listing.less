@@ -1,0 +1,106 @@
+.featured-listing-header, .single-petition-header, .blog-listing-header {
+  // background-image: url('../img/listing-header.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  // min-height: 600px;
+  .light-shade {
+    .bg-rgba(@brand-dark, 0.85);
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .section-info-white, .signature-info {
+    color: @white;
+  }
+}
+
+.single-petition-header {
+  // background-image: url('../img/petition-header.jpg');
+
+  .progress-wrapper-white div.progress+span{
+    color: @white;
+  }
+
+}
+
+.petition-list, .blog-list, .legendary-story{
+  padding-top: 6rem;
+  .petition-item, .blog-item {
+    border-radius: 4px;
+    background-color: @white;
+    box-shadow: 0 0 10px 0 @shadow-color;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 0 25px 0 @shadow-color;
+    }
+    .banner {
+      img {
+        width: 100%;
+        display: block;
+        //.transition(.2s, ease-in-out);
+      }
+      &:hover {
+        //transform: scale(1.5);
+      }
+    }
+    .contents {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      h5 {
+        margin-bottom: 8px;
+        line-height: 30px;
+        a, a:hover, a:active, a:visited {
+          color: @title-color;
+          text-decoration: none;
+        }
+      }
+      p {
+        .font-size(14);
+        margin-bottom: 0;
+      }
+
+      .report-info {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        .reporter, .date, .signature-count {
+          width: 50%;
+        }
+
+        .reporter {
+          display: flex;
+          align-items: center;
+          img {
+            border-radius: 50%;
+            max-width: 30px;
+            margin-right: 8px;
+          }
+        }
+
+        .date {
+          text-align: right;
+        }
+        .signature-count {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+
+.signature-list-table-area {
+  background-color: @white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+
+.sign-list-heading {
+  padding-bottom: 30px;
+}

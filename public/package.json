@@ -1,0 +1,23 @@
+{
+  "name": "petitionz",
+  "version": "1.0.2",
+  "description": "Petitionz - A html template to create petition website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "petition"
+  ],
+  "author": "codeboxr Team",
+  "license": "",
+  "homepage": "https://codeboxr.com/product/petitionz-petition-html-template/",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-minify": "0.0.15",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.11"
+  }
+}

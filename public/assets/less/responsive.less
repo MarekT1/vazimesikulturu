@@ -1,0 +1,306 @@
+/* ---------------------------------------------------------------------------*/
+// CUSTOM  RESPONSIVE
+/* ---------------------------------------------------------------------------*/
+/***Min-Width: Refers to everything greater than or equal to the amount given.
+**Max-Width: Refers to everything less than or equal to the amount given.*/
+
+/*==================================================
+     =        Bootstrap 3 Media Queries      =
+  ==================================================*/
+
+@media (max-width: 1400px) {
+  /* styles for account auth forms */
+  .login-section .container-fluid .light-shade .right-part,
+  .signup-section .container-fluid .light-shade .right-part,
+  .reset-section .container-fluid .light-shade .right-part {
+    form {
+      width: 100%;
+    }
+  }
+}
+
+/* -----------------------------------------------------------------------
+    Large devices (large desktops, 1200px and up)
+ ------------------------------------------------------------------------*/
+@media (max-width: @screen-lg-min) {
+  /************** 1200 GLOBAl USE***********/
+  /* styles for the footer */
+  footer .subscribe-form .subscribe-form-action .subscribe-input {
+    width: 65%;
+  }
+
+  footer .subscribe-form .subscribe-form-action .subscribe-btn {
+    width: 45%;
+  }
+
+  /************** 1200 GLOBAl USE END***********/
+}
+
+/* -----------------------------------------------------------------------
+     Medium devices (desktops, UP TO 1199px~992px)
+ ------------------------------------------------------------------------*/
+@media (max-width: @screen-md-max) {
+  /************** 1199 GLOBAl USE***********/
+  /************** 1199 GLOBAl USE END***********/
+}
+
+/* ----------------------------------------------------------------------
+     Small devices (tablets, UP TO 991px~768px)
+ -----------------------------------------------------------------------*/
+@media (max-width: @screen-sm-max) {
+  /************** 991 GLOBAl USE***********/
+  .not-alone {
+    .container-fluid {
+      .row {
+        .left-part {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .updates-area .owl-dots .owl-dot span {
+    margin: 6px 12px;
+  }
+
+  .blog-info {
+    margin-bottom: 2rem;
+    .social {
+      text-align: left;
+    }
+  }
+
+  #main-carousel {
+    .slideritem {
+      .featured {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .sgnature-listing-area {
+    .sign-card {
+      .signers-info {
+        h5 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        p.date-time {
+          font-size: 14px;
+          line-height: 18px;
+        }
+        p.message {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .success-petition .petition-card div.title {
+    top: 50%;
+    h6 {
+      //font-size: 30px;
+      .font-size(30);
+    }
+    p {
+      font-size: 15px;
+    }
+    //padding: 30% 30px 30px;
+  }
+
+}
+
+/* ---------------------------------------------------------------------
+    Extra small devices (phones, less UP TO 767px)
+ ----------------------------------------------------------------------*/
+@media (max-width: @screen-xs-max) {
+  /************** 767 GLOBAl USE***********/
+  #main {
+    margin-top: 50px;
+  }
+
+  header .navbar .navbar-nav li a {
+    border-bottom: 0;
+    &:hover, &:focus, &:active {
+      border-bottom: 0;
+    }
+  }
+
+  header .navbar .navbar-nav li .dropdown-menu li a {
+    padding-left: 3rem;
+  }
+
+  .navbar .navbar-collapse.in {
+    max-height: 400px;
+  }
+
+  .not-alone {
+    .container-fluid {
+      .row {
+        .left-part {
+          padding: 4rem 3rem 6rem;
+          text-align: center;
+        }
+        .right-part {
+          .row {
+            .col-xs-12.one, .col-xs-12.two, .col-xs-12.three, .col-xs-12.four {
+              padding: 5rem 3rem;
+            }
+            .one:after,
+            .two:after {
+              display: none;
+            }
+            .two:before,
+            .three:before,
+            .four:before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .easy-steps {
+    .light-shade {
+      .collect, .create, .raise {
+        padding: 4rem 3rem;
+      }
+    }
+  }
+
+  h2.section-heading {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+
+  /* styles for account auth forms */
+  .login-section .container-fluid .light-shade .right-part,
+  .signup-section .container-fluid .light-shade .right-part,
+  .reset-section .container-fluid .light-shade .right-part {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  /* single petition meta info */
+  .single-petition .meta-info {
+    display: block;
+    .creatorinfo, .social {
+      width: 100%;
+      text-align: left;
+      ul {
+        li {
+          a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .success-petition .petition-card {
+    padding: 15px;
+  }
+
+  .success-petition .petition-card div, .success-petition .petition-card::before {
+    .bg-rgba(@brand-dark, 0.6);
+    height: calc(~"100% - 30px");
+    width: calc(~"100% - 30px");
+    top: 15px;
+    left: 15px;
+  }
+
+  .success-petition .petition-card:hover::before {
+    top: 15px;
+    height: calc(~"100% - 30px");
+  }
+
+  .contact-section .container-fluid #map_canvas {
+    min-height: 400px;
+  }
+
+  /************** 767 GLOBAl USE END***********/
+}
+
+/*767 END*/
+
+/* styles for minimum width 767*/
+@media screen and (min-width: 768px) {
+
+}
+
+/* styles for minimum width 767 ends*/
+
+@media (max-width: 530px) {
+
+  #updates-carousel {
+    .owl-dots {
+      &:before {
+        display: none;
+      }
+      .owl-dot {
+        span {
+          margin: 4px 6px;
+        }
+      }
+      .owl-dot.active {
+        span {
+          width: 16px;
+          height: 16px;
+          margin: 2px 4px;
+        }
+      }
+    }
+  }
+
+}
+
+/* ----------------------------------------------------------------
+      Custom, iPhone Retina  UP TO 480px
+-------------------------------------------------------------------*/
+
+/************** 480 GLOBAl USE***********/
+@media (max-width: 480px) {
+  .comments-area .social-comments .nav-tabs li a {
+    padding: 5px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .success-petition .petition-card div.title {
+    p {
+
+      .opacity(1);
+    }
+  }
+
+  /************** 480 GLOBAl USE***********/
+
+}
+
+@media (max-width: 360px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
+
+/*-----------------------------------------------------------------------------
+    We occasionally expand on these media queries to a narrower set of devices.
+*-------------------------------------------------------------------------------*/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
